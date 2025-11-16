@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>CITSA-UCC</title>
+  </head>
+  <body class="font-[inter]">
+    <!-- HEADER -->
+    <header
+      class="bg-[#1a3c6d] w-full h-10 max-md:hidden text-white text-center flex items-center justify-center"
+    >
+      <p>
+        Welcome to CITSA - Computer Science and IT Students Association, UCC
+      </p>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav
+      class="flex justify-between items-center lg:px-20 md:px-8 py-2 max-md:py-4 shadow-md max-md:px-8 z-1000 max-md:fixed top-10 max-md:top-0 w-full bg-white"
+    >
+      <!-- logo -->
+      <div class="flex space-x-5 items-center">
+        <div class="border border-[#1a3c6d] w-15 max-md:w-10 rounded-xl">
+          <img src="./assets/logo.png" alt="" class="w-20 max-md:w-10" />
+        </div>
+        <div>
+          <h1 class="text-xl text-[#1a3c6d] font-bold">CITSA-UCC</h1>
+          <p class="text-gray-500 max-md:text-sm">
+            Development Through Technology
+          </p>
+        </div>
+      </div>
+      <!-- links -->
+      <ul class="text-gray-500 font-semibold flex space-x-5 max-md:hidden">
+        <li><a href="#">Home</a></li>
+
+        <li class="relative" id="link">
+          <a href="#">Academics <i class="fa-solid fa-angle-down"></i></a>
+          <div
+            class="absolute left-0 bg-white w-50 h-auto rounded-md shadow-md px-2 py-4 opacity-0 transition-all duration-300 translate-y-2 pointer-events-none z-1000"
+            id="dropdown"
+          >
+            <ul class="font-normal space-y-2">
+              <li
+                class="py-2 hover:bg-[#1a3c6d] hover:text-white transition-all duration-300"
+              >
+                <a href="#">Class Timetable</a>
+              </li>
+              <li
+                class="py-2 hover:bg-[#1a3c6d] hover:text-white transition-all duration-300"
+              >
+                <a href="#">Examination Timetable</a>
+              </li>
+              <li
+                class="py-2 hover:bg-[#1a3c6d] hover:text-white transition-all duration-300"
+              >
+                <a href="#">Resit Timetable</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li><a href="#">Executives</a></li>
+        <li><a href="#">Our Lecturers</a></li>
+        <li><a href="#">Media</a></li>
+      </ul>
+      <div
+        class="md:hidden px-2 py-2 rounded-md hover:bg-gray-100 transition-all"
+      >
+        <i class="fa-solid fa-bars text-2xl cursor-pointer" id="ham-btn"></i>
+      </div>
+    </nav>
+
+    <!-- Mobile nav for small devices -->
+
+    <div
+      class="bg-white fixed inset-0 transition-all duration-300 hidden z-1000"
+      id="mobile-nav"
+    >
+      <header
+        class="bg-[#1a3c6d] py-4 px-8 flex items-center justify-between fixed top-0 w-full z-1000"
+      >
+        <div class="flex space-x-5 items-center">
+          <div
+            class="border border-[#1a3c6d] bg-white w-15 max-md:w-10 rounded-xl"
+          >
+            <img src="./assets/logo.png" alt="" class="w-20 max-md:w-10" />
+          </div>
+          <div>
+            <h1 class="text-xl text-white font-bold">CITSA-UCC</h1>
+            <p class="text-white max-md:text-sm">
+              Development Through Technology
+            </p>
+          </div>
+        </div>
+        <button
+          class="text-4xl text-white cursor-pointer px-2 rounded-md hover:bg-white/20"
+          id="close-btn"
+        >
+          &times
+        </button>
+      </header>
+
+      <!-- links -->
+      <ul class="text-gray-500 font-semibold space-y-8 px-8 mt-25">
+        <li class="p-2 hover:bg-gray-300 hover:cursor-pointer">
+          <a href="#">Home</a>
+        </li>
+
+        <li class="relative" id="mobile-link">
+          <a href="#">Academics <i class="fa-solid fa-angle-down"></i></a>
+          <div
+            class="bg-white px-2 py-4 pointer-events-none hidden"
+            id="mobile-dropdown"
+          >
+            <ul class="font-normal space-y-2">
+              <li
+                class="py-2 hover:bg-[#1a3c6d] hover:text-white transition-all duration-300"
+              >
+                <a href="#">Class Timetable</a>
+              </li>
+              <li
+                class="py-2 hover:bg-[#1a3c6d] hover:text-white transition-all duration-300"
+              >
+                <a href="#">Examination Timetable</a>
+              </li>
+              <li
+                class="py-2 hover:bg-[#1a3c6d] hover:text-white transition-all duration-300"
+              >
+                <a href="#">Resit Timetable</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="p-2 hover:bg-gray-300 hover: cursor-pointer">
+          <a href="#">Executives</a>
+        </li>
+        <li class="p-2 hover:bg-gray-300 hover: cursor-pointer">
+          <a href="#">Our Lecturers</a>
+        </li>
+        <li class="p-2 hover:bg-gray-300 hover: cursor-pointer">
+          <a href="#">Media</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- End of  Mobile nav for small devices -->
+
+    <!-- Start of hero section -->
+    <section
+      class="bg-[url('images/orientation-shot.jpg')] h-screen bg-cover bg-center max-md:h-120 relative max-md:mt-18 px-20"
+    >
+      <!-- blue overlay -->
+      <div
+        class="bg-blue-900/70 inset-0 absolute text-white max-md:py-30 px-20 py-30 flex items-center justify-between space-x-4 max-md:flex-col"
+      >
+        <div class="">
+          <p
+            class="bg-white/15 w-14 px-2 py-2 inline rounded-full max-md:text-xs"
+          >
+            CITSA-UCC
+          </p>
+
+          <h1 class="py-4 text-5xl font-bold max-md:text-2xl">
+            CITSA 2024/2025 Freshers' Orientation
+          </h1>
+          <p class="py-2 text-white/90 max-md:text-sm">
+            An Orientation Session for Freshers to welcome them into the
+            Department of Computer Science and IT on January 25th at 9:00 AM in
+            Auditorium 900.
+          </p>
+          <!-- stats -->
+          <div class="flex space-x-4 mt-10">
+            <div
+              class="w-30 bg-white/22 p-2 rounded-lg shadow-md text-center max-md:w-20 max-md:px-0 py-0"
+            >
+              <span class="text-2xl font-semibold max-md:text-lg">2232+</span>
+              <br />
+              <span class="font-light max-md:text-xs">Students</span>
+            </div>
+            <div
+              class="w-30 bg-white/22 p-2 rounded-lg shadow-md text-center max-md:w-20 max-md:px-0 py-0"
+            >
+              <span class="text-2xl font-semibold max-md:text-lg">0+</span>
+              <br />
+              <span class="font-light max-md:text-xs">Events</span>
+            </div>
+            <div
+              class="w-30 bg-white/22 p-2 rounded-lg shadow-md text-center max-md:w-20 max-md:px-0 py-0"
+            >
+              <span class="text-2xl font-semibold max-md:text-lg">100%</span>
+              <br />
+              <span class="font-light max-md:text-xs">Success Rate</span>
+            </div>
+          </div>
+          <!-- end of stats -->
+        </div>
+        <!-- image on the right -->
+        <div class="p-4 bg-white/20 rounded-md max-md:hidden">
+          <img src="./images/image_39.jpg" alt="" class="md:w-150" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT CITSA  SECTION -->
+    <section class="py-5 px-4">
+      <!-- three divs -->
+      <div
+        class="flex justify-center space-x-4 max-md:flex-col max-md:space-y-5 max-md:place-items-center"
+      >
+        <!-- first div -->
+        <div
+          class="w-[25rem] bg-white shadow-md rounded-md flex space-x-4 items-center px-4 py-8 max-md:w-[20rem] hover:shadow-xl transition"
+        >
+          <div class="bg-blue-200/30 p-2 rounded-md">
+            <img src="./assets/bulb-svg.svg" alt="" class="w-12" />
+          </div>
+          <div class="space-y-2">
+            <p class="text-blue-900 text-lg font-semibold">Digital Library</p>
+            <p class="text-gray-400">
+              A vibrant campus offering social, cultural, and recreational
+              activities...
+            </p>
+            <ul>
+              <li
+                class="text-blue-900 cursor-pointer font-semibold hover:text-blue-500 transition"
+              >
+                <a href="#"
+                  >Learn More
+                  <span><i class="fa-solid fa-greater-than text-xs"></i></span
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- second div -->
+        <div
+          class="w-[25rem] bg-white shadow-md rounded-md flex space-x-4 items-center px-4 py-8 max-md:w-[20rem] hover:shadow-xl transition"
+        >
+          <div class="bg-blue-200/30 p-2 rounded-md">
+            <img src="./assets/team-svg.svg" alt="" class="w-12" />
+          </div>
+          <div class="space-y-2">
+            <p class="text-blue-900 text-lg font-semibold">Our Clubs</p>
+            <p class="text-gray-400">
+              Students led clubs providing skill building and peer
+              connections...
+            </p>
+            <ul>
+              <li
+                class="text-blue-900 cursor-pointer font-semibold hover:text-blue-500 transition"
+              >
+                <a href="#"
+                  >Learn More
+                  <span><i class="fa-solid fa-greater-than text-xs"></i></span
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- third div -->
+        <div
+          class="w-[25rem] bg-white shadow-md rounded-md flex space-x-4 items-center px-4 py-8 max-md:w-[20rem] hover:shadow-xl transition"
+        >
+          <div class="bg-blue-200/30 p-2 rounded-md">
+            <img src="./assets/hat-svg.svg" alt="" class="w-12" />
+          </div>
+          <div class="space-y-2">
+            <p class="text-blue-900 text-lg font-semibold">Our Communities</p>
+            <p class="text-gray-400">
+              Communities that enhance Student life through events and
+              initiatives
+            </p>
+            <ul>
+              <li
+                class="text-blue-900 cursor-pointer font-semibold hover:text-blue-500 transition"
+              >
+                <a href="#"
+                  >Learn More
+                  <span><i class="fa-solid fa-greater-than text-xs"></i></span
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- ABOUT CITSA UCC -->
+      <div
+        class="text-center mt-12 space-y-4 opacity-0 -translate-y-5 transition-all duration-700 ease-out text"
+      >
+        <h1 class="text-xl text-[#1a3c6f] font-semibold max-md:text-sm">
+          WHO WE ARE
+        </h1>
+        <h1 class="text-3xl text-[#1a3c6d] font-bold max-md:text-2xl">
+          About CITSA-UCC
+        </h1>
+        <hr class="w-20 mx-auto border-2" />
+      </div>
+      <!-- Group image -->
+      <div
+        class="py-8 flex justify-center opacity-0 transition-all duration-700 ease-out scale-95 transform images"
+      >
+        <div class="relative inline-block">
+          <!-- Image -->
+          <img
+            src="./images/image_15.jpg"
+            alt=""
+            class="rounded-xl w-[800px] h-[400px] object-cover transition"
+          />
+
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-blue-900/60 rounded-xl text-white py-10 px-5 flex flex-col justify-center space-y-4"
+          >
+            <h1 class="text-3xl font-bold max-md:text-xl">
+              Empowering Tech Leaders at UCC
+            </h1>
+            <p class="max-md:text-sm">
+              The Computing and Information Technology Students Association
+              (CITSA) is the premier student body representing all Computer
+              Science and Information Technology students at the University of
+              Cape Coast.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- MISSION AND VISION -->
+      <div
+        class="flex justify-center space-x-4 max-md:flex-col max-md:place-items-center max-md:space-y-4"
+      >
+        <!-- vision -->
+        <div
+          class="bg-gray-200 w-80 h-auto p-4 flex flex-col shadow-md opacity-0 transition-all duration-700 ease-out scale-95 transform images"
+        >
+          <i class="fa-solid fa-shield text-3xl text-[#1a3c6d]"></i>
+          <p class="font-bold text-2xl text-[#1a3c6d] py-4">Our Vision</p>
+          <p class="text-gray-500">
+            To be the leading tech community that shapes the next generation of
+            technology leaders in Africa.
+          </p>
+        </div>
+        <!-- mission -->
+        <div
+          class="bg-gray-200 w-80 h-auto p-4 flex flex-col shadow-md opacity-0 transition-all duration-700 ease-out scale-95 transform images"
+        >
+          <i class="fa-regular fa-house text-3xl text-[#1a3c6d]"></i>
+          <p class="font-bold text-2xl text-[#1a3c6d] py-4">Our Mission</p>
+          <p class="text-gray-500">
+            To foster innovation and professional growth through practical
+            learning, industry connections, and collaborative projects.
+          </p>
+        </div>
+        <!-- community -->
+        <div
+          class="bg-gray-200 w-80 h-auto p-4 flex flex-col shadow-md opacity-0 transition-all duration-700 ease-out scale-95 transform images"
+        >
+          <i class="fa-solid fa-users text-3xl text-[#1a3c6d]"></i>
+          <p class="font-bold text-2xl text-[#1a3c6d] py-4">Our Community</p>
+          <p class="text-gray-500">
+            A diverse network of tech enthusiasts, innovators, and future
+            industry leaders working together to achieve excellence.
+          </p>
+        </div>
+      </div>
+      <!-- message from HOD -->
+      <div
+        class="text-center mt-12 space-y-4 opacity-0 -translate-y-5 transition-all duration-700 ease-out text"
+      >
+        <h1 class="text-xl text-[#1a3c6f] font-semibold max-md:text-sm">
+          MESSAGE FROM HOD
+        </h1>
+        <h1 class="text-3xl text-[#1a3c6d] font-bold max-md:text-2xl">
+          Department Head's Address
+        </h1>
+        <hr class="w-20 mx-auto border-2" />
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
