@@ -53,7 +53,7 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.4 
+  threshold: 0.5 
 });
 text.forEach((text) => observer.observe(text));
 
@@ -66,6 +66,9 @@ const imageObserver = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.4 
+  threshold: 0.5
 });
 images.forEach((images) => imageObserver.observe(images));
+
+
+
