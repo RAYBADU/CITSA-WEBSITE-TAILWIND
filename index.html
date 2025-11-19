@@ -91,7 +91,7 @@
     <!-- Mobile nav for small devices -->
 
     <div
-      class="bg-white fixed inset-0 transition-all duration-300 hidden z-1000"
+      class="bg-white fixed inset-0 transition-all duration-300 transform -translate-x-full z-1000"
       id="mobile-nav"
     >
       <header
@@ -125,7 +125,9 @@
         </li>
 
         <li class="relative" id="mobile-link">
-          <a href="#">Academics <i class="fa-solid fa-angle-down"></i></a>
+          <p class="cursor-pointer">
+            Academics <i class="fa-solid fa-angle-down"></i>
+          </p>
           <div
             class="bg-white px-2 py-4 pointer-events-none hidden"
             id="mobile-dropdown"
@@ -234,14 +236,16 @@
             <img src="./assets/bulb-svg.svg" alt="" class="w-12" />
           </div>
           <div class="space-y-2">
-            <p class="text-blue-900 text-lg font-semibold">Digital Library</p>
-            <p class="text-gray-400">
+            <p class="text-blue-900 text-lg font-semibold max-md:text-sm">
+              Digital Library
+            </p>
+            <p class="text-gray-400 max-md:text-xs">
               A vibrant campus offering social, cultural, and recreational
               activities...
             </p>
             <ul>
               <li
-                class="text-blue-900 cursor-pointer font-semibold hover:text-blue-500 transition"
+                class="text-blue-900 cursor-pointer font-semibold hover:text-blue-500 transition max-md:text-xs"
               >
                 <a href="#"
                   >Learn More
@@ -259,14 +263,16 @@
             <img src="./assets/team-svg.svg" alt="" class="w-12" />
           </div>
           <div class="space-y-2">
-            <p class="text-blue-900 text-lg font-semibold">Our Clubs</p>
-            <p class="text-gray-400">
+            <p class="text-blue-900 text-lg font-semibold max-md:text-sm">
+              Our Clubs
+            </p>
+            <p class="text-gray-400 max-md:text-xs">
               Students led clubs providing skill building and peer
               connections...
             </p>
             <ul>
               <li
-                class="text-blue-900 cursor-pointer font-semibold hover:text-blue-500 transition"
+                class="text-blue-900 cursor-pointer font-semibold hover:text-blue-500 transition max-md:text-xs"
               >
                 <a href="#"
                   >Learn More
@@ -284,14 +290,16 @@
             <img src="./assets/hat-svg.svg" alt="" class="w-12" />
           </div>
           <div class="space-y-2">
-            <p class="text-blue-900 text-lg font-semibold">Our Communities</p>
-            <p class="text-gray-400">
+            <p class="text-blue-900 text-lg font-semibold max-md:text-sm">
+              Our Communities
+            </p>
+            <p class="text-gray-400 max-md:text-xs">
               Communities that enhance Student life through events and
               initiatives
             </p>
             <ul>
               <li
-                class="text-blue-900 cursor-pointer font-semibold hover:text-blue-500 transition"
+                class="text-blue-900 cursor-pointer font-semibold hover:text-blue-500 transition max-md:text-xs"
               >
                 <a href="#"
                   >Learn More
@@ -823,10 +831,10 @@
 
       <!-- Articles -->
       <div
-        class="flex max-md:flex-col max-md:place-items-center max-md:space-y-5 justify-center space-x-5 mt-10"
+        class="flex max-md:flex-col max-md:place-items-center max-md:space-y-5 justify-center space-x-10 mt-10"
       >
         <div
-          class="card bg-white shadow-md w-100 max-md:w-80 max-md:text-sm hover:shadow-xl hover:scale-[1.04] transition-all duration-300 p-5 rounded-lg"
+          class="card bg-white shadow-md w-100 max-md:w-80 max-md:text-sm hover:shadow-xl hover:scale-[1.04] transition-all duration-300 p-5 rounded-lg opacity-0 transition-all duration-700 ease-out scale-95 transform images"
         >
           <!-- image -->
           <div class="">
@@ -859,7 +867,7 @@
           </ul>
         </div>
         <div
-          class="card bg-white shadow-md w-100 max-md:w-80 max-md:text-sm hover:shadow-xl hover:scale-[1.04] transition-all duration-300 p-5 rounded-lg"
+          class="card bg-white shadow-md w-100 max-md:w-80 max-md:text-sm hover:shadow-xl hover:scale-[1.04] transition-all duration-300 p-5 rounded-lg opacity-0 transition-all duration-700 ease-out scale-95 transform images"
         >
           <!-- image -->
           <div class="">
@@ -891,7 +899,7 @@
           </ul>
         </div>
         <div
-          class="card bg-white shadow-md w-100 max-md:w-80 max-md:text-sm hover:shadow-xl hover:scale-[1.04] transition-all duration-300 p-5 rounded-lg"
+          class="card bg-white shadow-md w-100 max-md:w-80 max-md:text-sm hover:shadow-xl hover:scale-[1.04] transition-all duration-300 p-5 rounded-lg opacity-0 transition-all duration-700 ease-out scale-95 transform images"
         >
           <!-- image -->
           <div class="">
@@ -913,7 +921,7 @@
           <p class="mt-2 text-gray-500">
             On Friday, November 15, 2024, the Computer Science and Information
             Technology Students&rsquo; Association (CITSA) at the University of
-            Cape Coast host... Read Full Article
+            Cape Coast host...
           </p>
           <ul class="text-[#1a3c6d] mt-2 text-left">
             <li>
@@ -925,6 +933,112 @@
         </div>
       </div>
     </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#1a3c6d] py-10 px-5">
+      <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-10">
+        <!-- Logo + Description -->
+        <header class="flex flex-col">
+          <div class="flex space-x-5 items-center">
+            <div
+              class="border border-[#1a3c6d] bg-white w-15 max-md:w-10 rounded-xl"
+            >
+              <img src="./assets/logo.png" alt="" class="w-20 max-md:w-10" />
+            </div>
+            <div>
+              <h1 class="text-xl text-white font-bold">CITSA-UCC</h1>
+              <p class="text-white max-md:text-sm">
+                Development Through Technology
+              </p>
+            </div>
+          </div>
+
+          <p class="text-gray-300 mt-5 max-md:text-sm">
+            Computer Science and Information Technology Students Association,
+            fostering excellence in technology education.
+          </p>
+
+          <div class="flex space-x-5 mt-4">
+            <div class="p-2 rounded bg-white/8">
+              <i
+                class="fa-brands fa-facebook-f text-white/70 text-xl max-md:text-sm hover:text-white transition duration-300 cursor-pointer"
+              ></i>
+            </div>
+            <div class="p-2 rounded bg-white/8">
+              <i
+                class="fa-brands fa-twitter text-white/70 text-xl max-md:text-sm hover:text-white transition duration-300 cursor-pointer"
+              ></i>
+            </div>
+            <div class="p-2 rounded bg-white/8">
+              <i
+                class="fa-brands fa-instagram text-white/70 text-xl max-md:text-sm hover:text-white transition duration-300 cursor-pointer"
+              ></i>
+            </div>
+          </div>
+        </header>
+
+        <!-- Quick Links -->
+        <div class="space-y-4">
+          <p class="text-white text-xl max-md:text-lg font-bold">Quick Links</p>
+          <ul class="space-y-2">
+            <li
+              class="text-white/70 hover:text-white max-md:text-sm transition"
+            >
+              <a href="#">About Us</a>
+            </li>
+            <li
+              class="text-white/70 hover:text-white max-md:text-sm transition"
+            >
+              <a href="#">Programs</a>
+            </li>
+            <li
+              class="text-white/70 hover:text-white max-md:text-sm transition"
+            >
+              <a href="#">Events</a>
+            </li>
+            <li
+              class="text-white/70 hover:text-white max-md:text-sm transition"
+            >
+              <a href="#">News</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <p class="text-white text-xl max-md:text-lg font-bold">Contact</p>
+
+          <div class="p-4 rounded bg-white/8 w-auto mt-4 flex space-x-5">
+            <i
+              class="fa-regular fa-envelope text-white/70 text-xl max-md:text-sm hover:text-white transition cursor-pointer"
+            ></i>
+            <p class="text-white max-md:text-sm">raymondafrani00@gmail.com</p>
+          </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div>
+          <p class="text-white text-xl max-md:text-lg font-bold">Newsletter</p>
+          <p class="text-gray-300 mt-5 max-md:text-sm">
+            Stay updated with our latest news and events.
+          </p>
+
+          <div class="space-y-5 mt-4">
+            <input
+              type="text"
+              class="border w-full py-2 rounded-md px-4 bg-white outline-none"
+              placeholder="Enter your email"
+            />
+            <button
+              class="bg-white text-[#1a3c6d] w-full px-4 py-2 rounded-md font-semibold cursor-pointer max-md:text-sm hover:scale-[1.04] transition duration-300"
+            >
+              <a href="#">Subscribe</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script src="app.js"></script>
   </body>
 </html>

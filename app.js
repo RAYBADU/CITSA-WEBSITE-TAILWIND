@@ -35,40 +35,40 @@ mobileLink.addEventListener("click", () => [
 ]);
 
 hamBtn.addEventListener("click", () => {
-  mobileNav.classList.remove("hidden");
+  mobileNav.classList.remove("-translate-x-full");
 });
+
 closeBTn.addEventListener("click", () => {
-  mobileNav.classList.add("hidden");
+  mobileNav.classList.add("-translate-x-full");
 });
-
-// im yet to add some transitions to the mobile nav
-
 
 // IO for text
-const text = document.querySelectorAll(".text")
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("opacity-100", "translate-y-0")
-    }
-  });
-}, {
-  threshold: 0.5 
-});
+const text = document.querySelectorAll(".text");
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("opacity-100", "translate-y-0");
+      }
+    });
+  },
+  {
+    threshold: 0.5,
+  }
+);
 text.forEach((text) => observer.observe(text));
 
-
-const images = document.querySelectorAll(".images")
-const imageObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("opacity-100", "scale-100")
-    }
-  });
-}, {
-  threshold: 0.5
-});
+const images = document.querySelectorAll(".images");
+const imageObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("opacity-100", "scale-100");
+      }
+    });
+  },
+  {
+    threshold: 0.5,
+  }
+);
 images.forEach((images) => imageObserver.observe(images));
-
-
-
